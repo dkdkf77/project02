@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE LIONKING</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/js/jquery-3.1.1.min.js"></script>
+  <script src="js/js/jquery.bxslider.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    $(document).ready(function () {
+
+
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var Swiper1 = new Swiper(".mySwiper1", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        pagination: {
+          el: ".swiper-pagination"
+        }
+      });
+
+
+      AOS.init();
+
+      $('.slider').bxSlider();
+      // $('.section_fade1').fadeOut();
+      // $('.section_fade2').fadeOut();
+      // $('.section_fade3').fadeOut();
+      // $('.banner').fadeOut();
+      // $('.footer').fadeOut();
+
+      // $(window).scroll(function(){
+      //   if($(this).scrollTop()>600){
+      //     $('.section_fade1').fadeIn();
+
+      //   }
+      //   if($(this).scrollTop()>1800){
+      //     $('.section_fade2').fadeIn();
+
+      //   }
+      //   if($(this).scrollTop()>2000){
+      //     $('.banner').fadeIn();
+
+      //   }
+
+      //   if($(this).scrollTop()>2700){
+      //     $('.section_fade3').fadeIn();
+      //     $('.footer').fadeIn();
+
+      //   }
+      // })//스크롤 
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+          $('.section_fade1').css({
+            'background-size': '300px'
+          });
+          $('.circle_set').css({
+            'transform': 'translate(0)',
+            'opacity': '1'
+          });
+        }
+        if ($(this).scrollTop() > 1600) {
+          $('.title1').css({
+            'transform': 'translate(0)',
+            'opacity': '1'
+          });
+        }
+        if ($(this).scrollTop() > 2200) {
+          $('.title2').css({
+            'transform': 'translate(0)',
+            'opacity': '1'
+          });
+        }
+      });
+
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="inner">
+        <div class="logo"></div>
+        <nav>
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">CAST & CREATIVE</a></li>
+            <li><a href="#">MULTIMEDIA</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">WORLDWIDE</a></li>
+            <li><a href="#">TICKET</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="mainsection1">
+      
+        <div class="slider">
+          <div><img class="mainimg1" src="images/mainbanner3.png" alt="mainbanner3"></div>
+          <div><video autoplay="1" muted="1" src="images/thekingisback.mp4"></video></div>
+          <div><video autoplay="1" muted="1" src="images/reviewes.mp4"></video></div>
+        </div>
+    </section>
+    <section class="section1_setting">
+      <div class="inner">
+        <div class="sect1_title">
+          <h1>NOTICE</h1>
+        </div>
+
+        <div class="section1">
+          <div class="slider">
+            <div>
+              <p>공연 가이드 변경 사항 안내 및 공연 일정 알림</p>
+            </div>
+            <div>
+              <p>COVID 19 상황에 대한 공연 매너 안내사항 전달</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section_fade1">
+        <div class="inner">
+          <div class="section2">
+            <div class="section2_title">
+              <img src="images/sun_1.png" alt="태양">
+              <h4>2022</h4>
+                <h2>공연일정</h2>
+                <h6>※상기 일정은 내부 사정에 따라 변동 될 수 있습니다.</h6>
+            </div>
+            <div data-aos-duration="" class="circle_set">
+              <div class="circle1">
+                <h2>서 울</h2>
+                <h6>2022.01.26 ~ 2022.03.18</h6>
+                <h4>오페라극장</h4>
+                <div class="Dday1">
+                  <h1>
+                    D+42
+                  </h1>
+                </div>
+              </div>
+              <div class="circle2">
+              </div>
+              <div class="circle3">
+                <h2>부 산</h2>
+                <h6>2022.04.01 ~ 2022.05.06</h6>
+                <h4>드림씨어터</h4>
+                <div class="Dday2">
+                  <h1>
+                    D-23
+                  </h1>
+                </div>
+              </div>
+              <div class="circle4">
+              </div>
+            </div>
+          </div>
+          <hr class="hr1">
+        </div>
+      </div>
+    </section>
+    <section class="section_fade2">
+      <div class="inner">
+        <div class="section3">
+          <div class="subsection1">
+            <div class="title1">
+              <div class="title1_left">
+              </div>
+              <div class="title1_right">
+                <img src="images/star5.png" alt="star">
+                <h3>“THERE IS SIMPLY<br>
+                  NOTHING ELSE LIKE IT”</h3>
+                <h6>“어디에도 이런 공연은 없었다!”</h6>
+                <p>신랄한 비평으로 알려진 뉴욕타임즈조차<br>
+                  ‘배우가 연기하는 동물들의 놀랍고 이상<br>
+                  적인 모습은 신의 손길마저 느껴진다’라고<br>
+                  극찬했다.</p>
+                <h5>바로가기 ></h5>
+              </div>
+            </div>
+            <div class="subsection2">
+              <div class="title2">
+                <div class="title2_right">
+                </div>
+                <div class="title2_left">
+                  <img src="images/star5.png" alt="star">
+                  <h3>“QUITE SIMPLY, STUNNING”</h3>
+                  <h6>“한마디로 경이적인!”</h6>
+                  <p>무대을 여는 ‘서클 오브 라이프(Circle of Life)’부터 무대를 닫는<br>‘서클 오브 라이프(Circle of Life)’까지 한 순간도 놓칠 수
+                    없는<br>아프리카
+                    정글의 생생함 속으로 심바와 함께 여정을 떠나보자.<br>우리 삶을 우울하게 하는 코로나19를 잠시 나마 잊을 수 있을 것이다.</p>
+                  <h5>바로가기 ></h5>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr1">
+    </section>
+
+
+    <section class="section_fade3">
+
+      <div class="banner">
+        <div class="onlyimg"></div>
+        <div class="subbannertext">
+          <h3>라피키가 가져온<br>최대 1만원 할인 쿠폰!</h3>
+          <h5>바로가기 ></h1>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="Reviewes">
+          <div class="title3">
+            <h3>THE WAIT IS OVER!</h3>
+            <h6>"한국에서 원어로 만날 다시 없을 기회!"</h6>
+            <h2>관람 후기</h2>
+          </div>
+
+          <div class="swiper1 mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviewrect1">
+                  <div class="reviewcircle1">
+                    <h5>"최고의 연출력"</h5>
+                    <h6>dkdkf312</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviewrect2">
+                  <div class="reviewcircle2">
+                    <h5>“안 본 사람 없게 해주세요”</h5>
+                    <h6>ryurael</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviewrect3">
+                  <div class="reviewcircle3">
+                    <h5>“뉴욕에서 본 라이온킹 뮤지컬<br>
+                      잊을 수가 없어 예매 했어요”</h5>
+                    <h6>NEWYORKER12</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviewrect4">
+                  <div class="reviewcircle4">
+                    <h5>“죽기 전 한번은 꼭!<br>
+                      봐야할 뮤지컬”</h5>
+                    <h6>onelife33</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviewrect5">
+                  <div class="reviewcircle5">
+                    <h5>"이거는 아주 그냥 봐야합니다"</h5>
+                    <h6>dkdkf11</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <button class="btn1">자세히 보기</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="inner">
+        <div class="flogo">
+          <img src="images/footerlogo2.png" alt="footerlogo">
+        </div>
+        <div class="title">
+          <div>
+            <h6>개인정보처리방침</h6>
+            <h6>이메일정보무단수집거부</h6>
+          </div>
+          <div class="sns">
+            <img src="images/facebook.png" alt="facebook">
+            <img src="images/youtube.png" alt="youtube">
+            <img src="images/insta.png" alt="insta">
+          </div>
+        </div>
+        <div class="right">
+          <h5>사업자등록번호 211-86-93404 클립서비스㈜ 설도권<br>
+            통신판매신고번호 제2008-서울강남-2331호<br>
+            Copyright 2021 CLIP SERVICE Inc. All rights reserved.</h5>
+        </div>
+      </div>
+
+    </footer>
+    <div>
+      <div class="top">
+        <img src="images/top_shape.png" alt="">
+        <h3>TOP</h3>
+      </div>
+      <div class="ticket">
+        <img src="images/sun_3.png" alt="">
+        <h3>TICKET</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
