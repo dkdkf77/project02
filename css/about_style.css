@@ -53,6 +53,7 @@ header {
 }
 
 .logo > a {
+  display: block;
   width: 225px;
   height: 45px;
 }

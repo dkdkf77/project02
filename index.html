@@ -79,7 +79,7 @@
       // })//스크롤 
 
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
+        if ($(this).scrollTop() > 400) {
           $('.section_fade1').css({
             'background-size': '300px'
           });
@@ -88,17 +88,29 @@
             'opacity': '1'
           });
         }
-        if ($(this).scrollTop() > 1600) {
+        if ($(this).scrollTop() > 1300) {
           $('.title1').css({
             'transform': 'translate(0)',
             'opacity': '1'
           });
         }
-        if ($(this).scrollTop() > 2200) {
+        if ($(this).scrollTop() > 1600) {
           $('.title2').css({
             'transform': 'translate(0)',
             'opacity': '1'
           });
+        }
+      });
+
+      var a1 = 1;
+      $('.display').click(function(){
+        if (a1 == 1){
+          $('nav>ul').show();
+          a1 = 2;
+        
+        }else{
+          $('nav>ul').hide();
+          a1 =1;
         }
       });
 
@@ -112,11 +124,14 @@
 
 <body>
   <div class="wrap">
-    <header>
+    <header id="header">
       <div class="inner">
-        <div class="logo"></div>
+        <div class="logo"><a href="index.html"></a></div>
+        
         <nav>
+          <li class="display"><a href="#"><img src="images/3line.png" alt="3line"></a></li>
           <ul>
+            
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="#">CAST & CREATIVE</a></li>
             <li><a href="#">MULTIMEDIA</a></li>
@@ -329,11 +344,13 @@
     </footer>
     <div>
       <div class="top">
-        <img src="images/top_shape.png" alt="">
+        <a href="#header">
+          <img src="images/top_shape.png" alt="top">
+        </a>
         <h3>TOP</h3>
       </div>
       <div class="ticket">
-        <img src="images/sun_3.png" alt="">
+        <img src="images/sun_3.png" alt="ticket">
         <h3>TICKET</h3>
       </div>
     </div>

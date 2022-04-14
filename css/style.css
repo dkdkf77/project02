@@ -76,6 +76,7 @@ video{
 }
 
 .wrap {
+  overflow: hidden;
   font-family: 'Noto Sans KR', sans-serif;
   margin: 0 auto;
   width: 100%;
@@ -84,6 +85,7 @@ video{
   background-size: cover;
   background-position: center;
   z-index: -2;
+  min-width: 498px;
 }
 
 a {
@@ -101,6 +103,9 @@ main > img {
 }
 
 /************* 헤더 *********/
+.display{
+  display: none;
+}
 
 header {
   box-sizing: border-box;
@@ -122,9 +127,10 @@ header {
   height: 45px;
 }
 
-.logo a {
-  width: 100%;
-  height: 100%;
+.logo >a {
+  display: block;
+  width: 225px;
+  height: 45px;
 }
 
 nav {
@@ -765,7 +771,7 @@ footer::before {
 
 /********* 픽스 ***********/
 
-.top {
+.top  {
   cursor: pointer;
   z-index: 1;
   box-sizing: border-box;
@@ -780,7 +786,7 @@ footer::before {
   padding-top: 10px;
 }
 
-.top > img {
+.top > a> img {
   width: 20px;
   height: 10px;
 }
@@ -997,7 +1003,49 @@ hr {
     width: 100%;
     padding-left: 150px;
   }
+  .display{
+    display: block;
+    
 
+  }
+  .display>a>img{
+    width: 30px;
+    
+  }
+  nav > ul {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 330px;
+    top:100px;
+    right: 20px;
+    border: 2px solid #bc6909;
+    background-color: #eee;
+    border-radius: 10px;
+    display: none;
+    transition: 1s;
+  }
+
+  nav > ul  > li  {
+    width: 150px;
+  }
+
+  nav > ul > li {
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 15px 30px;
+  
+  }
+  nav > ul > li:hover {
+    background-color: #f8900c;
+    border-radius: 10px;
+    width: 150px;
+  
+  }
+
+
+ 
   .slider > img{
     width: 100%;
   }
@@ -1027,6 +1075,16 @@ hr {
     padding-left: 20%;
   }
 }
+
+@media  screen and (max-width: 600px){ 
+  .title1_right,.title2_left {
+    padding: 0;
+  }
+  
+}
+
+
+
 
 @media  screen and (max-width: 560px){ 
   header {
@@ -1100,6 +1158,49 @@ hr {
 .slider div p {
   font-size: 10px;
 }
+  
+}
+@media  screen and (max-width: 498px){ 
+  .display{
+    display: block;
+    
+
+  }
+  .display>a>img{
+    width: 30px;
+    
+  }
+  nav > ul {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 330px;
+    top:140px;
+    right: 20px;
+    border: 2px solid #bc6909;
+    background-color: #eee;
+    border-radius: 10px;
+    display: none;
+    
+  }
+
+  nav > ul  > li  {
+    width: 150px;
+  }
+
+  nav > ul > li {
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 15px 30px;
+    
+  }
+  nav > ul > li:hover {
+    background-color: #f8900c;
+    border-radius: 10px;
+    width: 150px;
+  }
+
   
 }
 
